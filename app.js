@@ -6,6 +6,12 @@ const verifyToken = require('./middleware/token')
 const app = express();
 app.use(express.json());
 
+app.get('/hello', (req, res) => {
+    res.json({
+        message: 'hello world'
+    })
+})
+
 // GET ALL USERS
 app.get('/users', Usercontrollers.getAllUsers);
 
