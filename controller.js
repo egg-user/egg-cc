@@ -297,7 +297,7 @@ const updateUser = async (req, res) => {
 
 const getDescription = (req, res) => {
     const kondisi = req.params.kelas;
-    const sql = 'SELECT deskripsi FROM buah WHERE kondisi = ?';
+    const sql = 'SELECT deskripsi, rekomendasi FROM buah WHERE kondisi = ?';
 
     db.query(sql, [kondisi], (err, result) => {
       if (err) {

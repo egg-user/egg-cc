@@ -39,6 +39,12 @@ app.put('/users/edit/:userId', verifyToken, Usercontrollers.updateUser);
 //GET DESCRIPTION
 app.get('/buah/:kelas', verifyToken, Usercontrollers.getDescription)
 
+app.get('/', (req, res) => {
+    res.json({
+        message: 'butect has been deploy'
+    })
+})
+
 
 app.listen(3000, () => {
     console.log('Server started on port 3000');
